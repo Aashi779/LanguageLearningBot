@@ -5,29 +5,15 @@ FluoLingo is a telegram bot that allows you to enhance and test your language sk
 </br>
 
 # Upcoming Features:
-* Learning  Indian traditional languages.</br>
-* Create a large Database for storing your credentials , progress report and your rank.</br>
-* Soon more  Indian tranditional languages will be introduced on this platform.</br>
+* Create a large database for storing your credentials, progress report and your rank among peers.</br>
+* Soon more Indian tranditional languages will be introduced on this platform.</br>
 </br>
  
-
-
-
-
-
-
-
-
 ## Development:
-* Contact@BotFather  in order to create a new bot and receive a token.</br>
-
+* Contact @BotFather in order to create a new bot and receive a token.</br>
 * Install  all dependencies from requirements.txt</br>
 </br>
 
-## ✅ Correctness & Testing:
-Before each release, this project is thoroughly tested using unit tests and systems integration tests.Once you've mastered the fundamentals of Telegram chatbots, you'll be able to easily understand the code in the examples and apply it to your own bot projects.</br>
-</br>
-</br>
 ## Documentation:
 Essential documentations for better comprehension.<br>
 
@@ -38,6 +24,10 @@ https://docs.python-telegram-bot.org/en/v13.3/telegram.bot.html
 ### documentation for Aiogram
 
 https://docs.aiogram.dev/en/latest/index.html
+</br>
+</br>
+## ✅ Correctness & Testing:
+Before each release, this project is thoroughly tested using unit tests and systems integration tests. Once you've mastered the fundamentals of Telegram chatbots, you'll be able to easily understand the code in the examples and apply it to your own bot projects.</br>
 </br>
 </br>
 ## Installation
