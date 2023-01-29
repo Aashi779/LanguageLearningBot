@@ -1,1 +1,35 @@
+1. python-telegram-bot==13.3
+pip install python-telegram-bot==13.3
+#
+2. aiogram 
+pip install aiogram
+#
+3. telebot
+pip install telebot
+#
+4. pyqrcode
+pip install pyqrcode
+#
+5. qrcode
+pip install qrcode
+#
+6. pillow
+pip install pillow 
+#
+7. random 
+import random 
+#
+8. logging
+import logging 
+# 
+
+
+
+
+
+
+
+
+
+
 
