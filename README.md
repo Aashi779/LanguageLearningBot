@@ -15,11 +15,11 @@ We The Hustlers101  mainly focuses on building multi-language user friendly Lang
 
 
 
-Development:
+**Development:**
 Contact@BotFather  in oredr to create a new bot and receive a token.
 Install  all dependencies from requirements.txt 
 
-Versions and Documentation:
+**Versions and Documentation**:
 python-telegram-bot==13.3 version used.
 
 Documentation on python-telegram-bot version 13.3 for developers to understand what all libraries are used and for better understanding.
