@@ -8,7 +8,7 @@ The bot API is an HTTP-based interface created for developers keen on building b
 We The Hustlers101  mainly focuses on building multi-language user friendly Language learning platform.</br>
 </br>
 
-# Upcoming features
+# upcoming features
 learning  Indian traditional languages.</br>
 Create a large Database for storing your credentials , progress report and your rank.</br>
 Soon more  Indian tranditional languages will be introduced on this platform.</br>
@@ -42,8 +42,7 @@ pip install python-telegram-bot==13.3
 pip install aiogram
 ```
 </br>
-### aiogram 
-# Documentaion
+## Documentaion
 </br>
 ### Documentation for python-telegram-bot version 13.3 to help developers understand what libraries are used and to improve conceptual understanding.</br>
 --
