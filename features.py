@@ -7,8 +7,10 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.storage import FSMContext
 from aiogram.types import Message, CallbackQuery
 
+CallbackContext is a convenience class used in the PTB framework to provide access to commonly used objects into your handler callbacks. For each update one instance of this class is built by the Dispatcher and passed to the handler callbacks as second argument.
 bot = Bot(token = '5679962308:AAHUvmUUf5k5L9QW6g653Wt_1dCu02IVAY0')
-dp = Dispatcher(bot, storage=MemoryStorage())
+dp = Dispatcher(bot, storage=MemoryStorage()) # Dispatcher is a class that work s with the updates through Handlers
+# manages in-memory dictionaries that can be used to store bot/chat/user related data
 
 button1 = KeyboardButton('Please share your contact number', request_contact = True)
 button2 = KeyboardButton('Please share your current location', request_location = True)
