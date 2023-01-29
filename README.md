@@ -21,7 +21,7 @@ Essential documentations for better comprehension.<br>
 https://docs.python-telegram-bot.org/en/v13.3/telegram.bot.html
 </br>
 
-### documentation for Aiogram
+### Documentation for Aiogram
 
 https://docs.aiogram.dev/en/latest/index.html
 </br>
@@ -44,7 +44,7 @@ pip install aiogram
  
  
 ## License
-
+[MIT License](LICENSE)
 
 
 
