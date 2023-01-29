@@ -35,7 +35,6 @@ Before each release, this project is thoroughly tested using unit tests and syst
 ## Documentaion
 </br>
 ### Documentation for python-telegram-bot version 13.3 to help developers understand what libraries are used and to improve conceptual understanding.</br>
---
 https://docs.python-telegram-bot.org/en/v13.3/telegram.bot.html
 </br>
 </br>
