@@ -58,7 +58,7 @@ def reply(update, context):
     user_input=update.message.text
     update.message.reply_text(lang_translator(user_input))
     
-#Function containing all video resources of French required for learning.    
+#Function containing all video resources of languages required for learning.    
 def french_resources(update,context):
     update.message.reply_text('''
     Beginner's level tutorial resources:
@@ -70,8 +70,6 @@ def french_resources(update,context):
     advanced level tutorial resources:
     https://www.youtube.com/watch?v=IwMjSFXhG34&list=PLfDmeEHel1x0Ta1jNYTpAO8fhyLgllt7q
        ''')   
-    
-#Function containing all video resources of Japanese required for learning.     
 def japanese_resources(update, context):
     update.message.reply_text('''
     Beginner's level tutorial resources:
@@ -82,9 +80,7 @@ def japanese_resources(update, context):
    
     advanced level tutorial resources:
     https://www.youtube.com/watch?v=W3DhBZwfL2M&list=PLgoGx_gLcCZyNMqXeTCN4kIjgAYoIf2zl
-       ''') 
-    
-#Function containing all video resources of German required for learning.     
+       ''')    
 def german_resources(update, context):
     update.message.reply_text("""
     Beginner's level tutorial resources:
@@ -126,6 +122,7 @@ def Japanese_Alphabets(update, context):
     chat_id = update.message.chat_id
     bot.send_photo(chat_id = chat_id, photo=open(photo, "rb"))    
 
+#Function displaying flashcards(Alphabets and Numbers) based on language selected.    
 def flashcard(update:Update,context:CallbackContext)->None:
     global lang
     if lang=="german":
@@ -145,7 +142,8 @@ def flashcard(update:Update,context:CallbackContext)->None:
         Japanese_Numbers(update,context)
     else:
         update.message.reply_text('Invalid')    
-    
+
+#Function displaying resources based on language selected.          
 def resources(update:Update,context:CallbackContext)->None:
     global lang
     if lang=="german":
@@ -162,12 +160,13 @@ def resources(update:Update,context:CallbackContext)->None:
 # or in a file, for this example we will use a dictionary
 users = {
     # username: password
-    'Ambika': 'Test@123',
-    'Aashi': 'xyz@1',
-    'Anushka': 'Try@123',
-    'Navya': 'abc@1',
+    'username1': 'password1',
+    'username2': 'password2',
+    'username3': 'password3',
+    'username4': 'password4',
 }
 
+#Function to authenticate user credentials. 
 def login(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome! Please enter your username:")
     return 'USERNAME'
@@ -181,7 +180,6 @@ def username(update, context):
     else:
         context.bot.send_message(chat_id=update.effective_chat.id, text="Invalid username. Please try again.")
         return 'USERNAME'
-
 def password(update, context):
     password = update.message.text
     username = context.user_data['username']
@@ -192,18 +190,19 @@ def password(update, context):
     else:
         context.bot.send_message(chat_id=update.effective_chat.id, text="Invalid password. Please try again.")
         return 'PASSWORD'
-
 def cancel(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Login process canceled.")
     return ConversationHandler.END
 
+#Function for greeting.
 def greet(update, context):
     logger.info("User {} started the bot".format(update.message.from_user.username))
     #user_input=update.message.text
     #if user_input.lower() in ["Hello",:
     update.message.reply_text("Hello, I'm FluoLingo your guide in the journey of learning new language.")
 
-    
+#Functions to create a quiz for user based on language selected.
+#Validate user 
 def start_quiz(update, context):
     global lang
     if lang=='french':
@@ -268,6 +267,7 @@ def end_quiz(update, context):
     context.user_data.clear()
     return ConversationHandler.END
 
+#Function taking feedback from user
 def feedback(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Welcome to the feedback form! What's your name?")
     return 'NAME'
@@ -296,11 +296,8 @@ def cancel1(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Thanks for your feedback!.We appreciate your input.")
     return ConversationHandler.END
 
-bot = telegram.Bot(token="YOUR BOT_TOKEN")
-api="YOUR BOT_TOKEN"
-updater=Updater(api,use_context=True)
-dp = updater.dispatcher
 
+bot = telegram.Bot(token="YOUR BOT_TOKEN")
 def main():
     api="YOUR BOT_TOKEN"
     updater=Updater(api,use_context=True)
