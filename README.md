@@ -1,7 +1,7 @@
-# LanguageLearningBot
-LanguageLearningBot is a Telegram bot that allows you to enhance and test your language skills for multi-languages.The goal of this project is to develop a bot that can assist users in learning a new language through the use of natural language processing and machine learning. The bot will be programmed to understand and interpret user input in multiple languages, as well as to provide personalised responses to assist users in improving their language skills.The bot will be able to support multiple languages, and will be accessible to users via Telegram.</br>
+# LanguageLearningBot - # FluoLingo
+FluoLingo is a Telegram bot that allows you to enhance and test your language skills for multi-languages through the use of natural language processing and machine learning. The bot will be programmed to understand and interpret user input in multiple languages, as well as to provide personalised responses to assist users in improving their language skills.The bot will be able to support multiple languages, and will be accessible to users via Telegram.</br>
 
-We Hustlers101 are primarily concerned with developing a multi-language, user-friendly language learning platform.</br>
+We Hustlers101 are primarily concerned with developing a multiple-language, user-friendly language learning platform.</br>
 </br>
 
 # Upcoming Features:
