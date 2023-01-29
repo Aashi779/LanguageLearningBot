@@ -296,13 +296,13 @@ def cancel1(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text="Thanks for your feedback!.We appreciate your input.")
     return ConversationHandler.END
 
-bot = telegram.Bot(token="5437030312:AAHKEv2vgT_2T8O-mOVaH_9Z49buhgBpEe4")
-api="5437030312:AAHKEv2vgT_2T8O-mOVaH_9Z49buhgBpEe4"
+bot = telegram.Bot(token="YOUR BOT_TOKEN")
+api="YOUR BOT_TOKEN"
 updater=Updater(api,use_context=True)
 dp = updater.dispatcher
 
 def main():
-    api="5437030312:AAHKEv2vgT_2T8O-mOVaH_9Z49buhgBpEe4"
+    api="YOUR BOT_TOKEN"
     updater=Updater(api,use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('start',greet))
