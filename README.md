@@ -8,8 +8,6 @@ The bot API is an HTTP-based interface created for developers keen on building b
 We The Hustlers101  mainly focuses on building multi-language user friendly Language learning platform.</br>
 </br>
 </br>
-</br>
-</br>
 # upcoming features
 learning  Indian traditional languages.</br>
 Create a large Database for storing your credentials , progress report and your rank.</br>
