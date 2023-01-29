@@ -25,6 +25,7 @@ async def greet(message: types.Message):
 async def welcome(message: types.Message):
     await message.reply("Hello! I am FluoLingo", reply_markup = keyboard1)
 
+# info function asks the user to share their contact and their location with their due consent for data storage purposes 
 @dp.message_handler(commands = ['info'])
 async def info(message: types.Message):
     await message.reply("Say something to you: ", reply_markup = keyboard1)
@@ -34,7 +35,7 @@ class Form(StatesGroup):
     Q2 = State()  # Second question
     Q3 = State()  # Third question
 
-# Function to handle the user's message
+# Function to handle the user's message and to converse with the user
 @dp.message_handler(state='*', commands=['converse'])
 async def process_start_command(message: Message):
     await bot.send_message(chat_id=message.chat.id, text="Hello, what is your name?")
