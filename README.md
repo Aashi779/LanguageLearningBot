@@ -32,12 +32,13 @@ Install  all dependencies from requirements.txt</br>
 Before each release, this project is thoroughly tested using unit tests and systems integration tests.Once you've mastered the fundamentals of Telegram chatbots, you'll be able to easily understand the code in the examples and apply it to your own bot projects.</br>
 </br>
 </br>
-## Documentaion
-</br>
+## Documentation
+Important documents for better understanding.<br>
+
 ### Documentation for python-telegram-bot version 13.3 to help developers understand what libraries are used and to improve conceptual understanding.</br>
 https://docs.python-telegram-bot.org/en/v13.3/telegram.bot.html
 </br>
-</br>
+
 ### documentation for Aiogram
 
 https://docs.aiogram.dev/en/latest/index.html
