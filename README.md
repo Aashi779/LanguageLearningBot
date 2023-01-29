@@ -7,12 +7,12 @@ The bot API is an HTTP-based interface created for developers keen on building b
 
 We The Hustlers101  mainly focuses on building multi-language user friendly Language learning platform.</br>
 </br>
-</br>
+
 # upcoming features
 learning  Indian traditional languages.</br>
 Create a large Database for storing your credentials , progress report and your rank.</br>
 Soon more  Indian tranditional languages will be introduced on this platform.</br>
-
+</br>
  
 
 
@@ -27,7 +27,7 @@ Contact@BotFather  in oredr to create a new bot and receive a token.</br>
 
 Install  all dependencies from requirements.txt</br>
 </br>
-</br>
+
 ## ✅ Correctness & Testing
 Before each release, this project is thoroughly tested using unit tests and systems integration tests.Once you've mastered the fundamentals of Telegram chatbots, you'll be able to easily understand the code in the examples and apply it to your own bot projects.</br>
 </br>
@@ -41,6 +41,7 @@ pip install python-telegram-bot==13.3
 ```bash
 pip install aiogram
 ```
+</br>
 ## Documentaion</br>
 ### Documentation for python-telegram-bot version 13.3 to help developers understand what libraries are used and to improve conceptual understanding.</br>
 
