@@ -13,6 +13,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 lang=""
 
+#Function to generate a QR Code to join FluoLingo Community
 def create_qr(update, context):
     link = 'https://t.me/+tRwdGI1KD-o3MDRl'
     qr = qrcode.QRCode(version=1, box_size=10, border=5)
@@ -23,6 +24,7 @@ def create_qr(update, context):
     with open('qr_code.png', 'rb') as f:
         context.bot.send_photo(chat_id=update.effective_chat.id, photo=f)
 
+#This function generates buttons to choose the language
 def select_lang(update:Update,context:CallbackContext)->None:
     keyboard=[
         [
@@ -36,63 +38,60 @@ def select_lang(update:Update,context:CallbackContext)->None:
     reply_keyboard=InlineKeyboardMarkup(keyboard,one_time_keyboard=True)
     update.message.reply_text('Which language do u want to learn in?',reply_markup=reply_keyboard)
 
+#Function to translate and return user input sentences in language selected by user.     
 def lang_translator(user_input):
     global lang
     translator=Translator(from_lang="english",to_lang=lang)
     translation = translator.translate(user_input)
     return translation
 
+#Function which stores the data generated on selecting a button.
 def button(update:Update,context:CallbackContext)->None:
     global lang
     lang=update.callback_query.data.lower()
     query=update.callback_query
     query.answer()
     query.edit_message_text(text=f"{query.data},has been selected for learning! Let's start!")
-    
+ 
+#Takes user input and displays the translated sentence.
 def reply(update, context):
     user_input=update.message.text
     update.message.reply_text(lang_translator(user_input))
     
-    
+#Function containing all video resources of French required for learning.    
 def french_resources(update,context):
     update.message.reply_text('''
-    
     Beginner's level tutorial resources:
     https://www.youtube.com/watch?v=91lIllsNR6c&list=PLfDmeEHel1x3o_e4UjWXR4kClH7ZfAgZ9
-    
     
     intermediate level tutorial resources:
     https://www.youtube.com/watch?v=IBOY7qY-hhU&list=PLfDmeEHel1x3VnQSxqgjY1ZgZbF4u34P0
    
-   
-   
     advanced level tutorial resources:
     https://www.youtube.com/watch?v=IwMjSFXhG34&list=PLfDmeEHel1x0Ta1jNYTpAO8fhyLgllt7q
-       ''')        
+       ''')   
+    
+#Function containing all video resources of Japanese required for learning.     
 def japanese_resources(update, context):
     update.message.reply_text('''
-    
     Beginner's level tutorial resources:
     https://www.youtube.com/watch?v=4bbWx7VVGAU&list=PLqzIFY9f_F_75pRpAV3iO_RRje0fwVo8Y
-    
     
     intermediate level tutorial resources:
     https://www.youtube.com/watch?v=JUqh9PuuOjM&list=PLgoGx_gLcCZwRwQmrOhw-aFBNfPhn2b00
    
-   
-   
     advanced level tutorial resources:
     https://www.youtube.com/watch?v=W3DhBZwfL2M&list=PLgoGx_gLcCZyNMqXeTCN4kIjgAYoIf2zl
-       ''')    
+       ''') 
+    
+#Function containing all video resources of German required for learning.     
 def german_resources(update, context):
     update.message.reply_text("""
-    
     Beginner's level tutorial resources:
     https://www.youtube.com/watch?v=RuGmc662HDg&list=PLF9mJC4RrjIhS4MMm0x72-qWEn1LRvPuW
     https://www.learngermanonline.org/spelling-and-punctuation/
     https://www.learngermanonline.org/pronunciation/
     https://www.learngermanonline.org/free-grammar-exercises/
-    
     
     intermediate level tutorial resources:
     https://www.youtube.com/watch?v=WGMXaRe6UKA&list=PLF9mJC4RrjIhhEGuI2x4_WWaIyn9q7MzV
@@ -101,6 +100,7 @@ def german_resources(update, context):
     https://www.youtube.com/watch?v=FcbI5gIhxFU&list=PLk1fjOl39-53pjPz2VLCeu5vjOUMKZ22O
        """)
     
+#Functions containing flashcards(alphabets and numbers) of all languages.    
 def French_Numbers(update, context):
     photo = r"french_numbers.png"
     chat_id = update.message.chat_id
