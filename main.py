@@ -1,3 +1,4 @@
+#Libraries necessary to import
 import telegram
 from telegram import Update,InlineKeyboardButton,InlineKeyboardMarkup
 from telegram.ext import CallbackContext,CommandHandler,CallbackQueryHandler,ConversationHandler
@@ -9,6 +10,8 @@ import logging
 import random
 import qrcode
 
+#Logging functions allow developers to track the actions and events that occur within the bot.
+#It is a crucial tool for maintaining and improving the functionality of Telegram bots.
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
 lang=""
@@ -201,8 +204,8 @@ def greet(update, context):
     #if user_input.lower() in ["Hello",:
     update.message.reply_text("Hello, I'm FluoLingo your guide in the journey of learning new language.")
 
-#Functions to create a quiz for user based on language selected.
-#Validate user 
+#Functions to create a quiz for user, based on language selected.
+#Validating user score based on performance. 
 def start_quiz(update, context):
     global lang
     if lang=='french':
